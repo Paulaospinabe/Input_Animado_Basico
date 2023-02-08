@@ -1,0 +1,34 @@
+.container{
+    padding: 250px;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    position: relative;
+}
+input{
+
+    border: solid 2px green;
+    border-radius: 5px;
+    background: none;
+    padding: .5rem;
+    font-size: 1rem;
+    transition: 150ms cubic-bezier(.4, 0, .2, 1);
+}
+label{
+    position: absolute;
+    left: 16px;
+    pointer-events: none;
+    transition: 150ms cubic-bezier(.4, 0, .2, 1);
+    transform: translateY(1rem);
+    color: green;
+}
+input:focus{
+    outline: none;
+    border: 2px solid pink;
+}
+input:focus ~ label{
+    transform: translateY(-50%) scale(1.1);
+    background: white;
+    color: lightpink;
+}
